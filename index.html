@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="charting_library/charting_library.standalone.js"></script>
+        <script src="datafeeds/udf/dist/bundle.js"></script>
+    </head>
+    <body>
+
+
+        <div id="chart-container"></div>
+
+        <script>
+            new TradingView.widget({
+                container:'chart-container',
+                locale:'en',
+                library_path:'charting_library/',
+                datafeed:new Datafeeds.UDFCompatibleDatafeed('https://demo-feed-data.tradingview.com'),
+                symbol:'AAPL',
+                interval:'1D',
+                fullscreen:true,
+                debug:true,
+            });
+
+        </script>
+
+    </body>
+</html>
